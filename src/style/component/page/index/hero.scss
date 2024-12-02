@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 100dvh;
+  height: 100svh;
   // height: 100%;
   @include adaptivePropertyMobile(margin-bottom, 120, 20);
   &__image {
@@ -21,7 +21,7 @@
 
   &__container {
     display: flex;
-    height: 100dvh;
+    height: 100svh;
     flex-direction: column;
     justify-content: space-between;
   }

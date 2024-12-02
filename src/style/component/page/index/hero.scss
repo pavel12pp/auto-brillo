@@ -1,4 +1,5 @@
 .hero {
+  overflow: hidden;
   position: relative;
   height: 100svh;
   // height: 100%;
@@ -145,8 +146,8 @@
   &__service, &__link {
     display: flex;
     width: fit-content;
-    @include adaptivePropertyMobile(padding-top, 15, 10);
-    @include adaptivePropertyMobile(padding-bottom, 15, 10);
+    @include adaptivePropertyMobile(padding-top, 15, 5);
+    @include adaptivePropertyMobile(padding-bottom, 15, 5);
     @include adaptivePropertyMobile(padding-left, 35, 20);
     @include adaptivePropertyMobile(padding-right, 35, 20);
     @include adaptivePropertyMobile(gap, 20, 10);

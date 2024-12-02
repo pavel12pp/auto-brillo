@@ -5,13 +5,15 @@
   line-height: 1.1;
   font-weight: 700;
   &:has(.title-car) {
-    display: inline-block;
-    position: relative;
-    @include adaptivePropertyMobile(margin-top, 40, 24);
+    display: inline;
     @include adaptivePropertyMobile(margin-right, 20, 10);
   }
 }
-
+.title-inner {
+  position: relative;
+  @include adaptivePropertyMobile(margin-top, 40, 24);
+  width: fit-content;
+}
 .title-car {
   display: block;
   position: absolute;

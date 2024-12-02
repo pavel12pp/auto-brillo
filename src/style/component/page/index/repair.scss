@@ -22,7 +22,7 @@
       @include adaptivePropertyMobile(padding-left, 0, 0);
     };
     & > *:not(:last-child) {
-      @include adaptivePropertyMobile(margin-bottom, 30, 10);
+      @include adaptivePropertyMobile(margin-bottom, 20, 10);
     }
   }
 

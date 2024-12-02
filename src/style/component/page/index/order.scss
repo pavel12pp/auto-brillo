@@ -46,7 +46,7 @@
       border-radius: 0px;
     };
     & > *:not(:last-child) {
-      @include adaptivePropertyMobile(margin-bottom, 30, 10);
+      @include adaptivePropertyMobile(margin-bottom, 20, 10);
     }
   }
 

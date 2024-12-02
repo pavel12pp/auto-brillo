@@ -23,12 +23,15 @@
     display: flex;
     min-height: 100dvh;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   &__header {
     display: flex;
-    @include adaptivePropertyMobile(padding-top, 55, 10);
-    @include adaptivePropertyMobile(margin-bottom, 100, 30);
+    @include adaptivePropertyMobile(padding-top, 25, 10);
+    // @include adaptivePropertyMobile(margin-bottom, 50, 15);
+    // margin-bottom: 7dvh;
+    margin-bottom: 3dvh;
     & > * {
       flex: 0 0 50%;
     }
@@ -122,9 +125,10 @@
   &__content {
     width: 878px;
     max-width: 100%;
-    @include adaptivePropertyMobile(margin-bottom, 64, 20);
+    // @include adaptivePropertyMobile(margin-bottom, 54, 15);
+    margin-bottom: 8dvh;
     & > *:not(:last-child) {
-      @include adaptivePropertyMobile(margin-bottom, 50, 20);
+      @include adaptivePropertyMobile(margin-bottom, 30, 15);
     }
   }
 
@@ -141,10 +145,10 @@
   &__service, &__link {
     display: flex;
     width: fit-content;
-    @include adaptivePropertyMobile(padding-top, 30, 10);
-    @include adaptivePropertyMobile(padding-bottom, 30, 10);
-    @include adaptivePropertyMobile(padding-left, 50, 20);
-    @include adaptivePropertyMobile(padding-right, 50, 20);
+    @include adaptivePropertyMobile(padding-top, 20, 10);
+    @include adaptivePropertyMobile(padding-bottom, 20, 10);
+    @include adaptivePropertyMobile(padding-left, 35, 20);
+    @include adaptivePropertyMobile(padding-right, 35, 20);
     @include adaptivePropertyMobile(gap, 20, 10);
     align-items: center;
     & > span {
@@ -179,8 +183,8 @@
   &__scroll {
     display: block;
     width: fit-content;
-    @include adaptivePropertyMobile(padding-bottom, 84, 20);
-    margin-top: auto;
+    @include adaptivePropertyMobile(padding-bottom, 54, 10);
+    // margin-top: auto;
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;

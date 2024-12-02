@@ -24,7 +24,7 @@
     @include adaptivePropertyMobile(padding-left, 50, 10);
     @include adaptivePropertyMobile(padding-right, 61, 10);
     & > *:not(:last-child) {
-      @include adaptivePropertyMobile(margin-bottom, 30, 10);
+      @include adaptivePropertyMobile(margin-bottom, 20, 10);
     }
   }
 

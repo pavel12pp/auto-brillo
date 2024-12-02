@@ -1,6 +1,6 @@
 .title {
   text-transform: uppercase;
-  @include adaptivePropertyMobile(font-size, 50, 24);
+  @include adaptivePropertyMobile(font-size, 40, 24);
   color: var(--primary-textColor);
   line-height: 1.1;
   font-weight: 700;

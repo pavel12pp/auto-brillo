@@ -1,0 +1,30 @@
+:root {
+
+  //Font
+  --primary-fontFamily: 'Red Rose', sans-serif;
+  --primary-fontWeight: 400,
+
+  //Color
+  --primary-color: #1B1918;
+  --accent-color: #E30016;
+  --secondary-color: #ffffff;
+
+  //Text
+  --primary-textColor: var(--primary-color);
+  --accent-textColor: var(--accent-color);
+  --secondary-textColor: var(--secondary-color);
+
+  //Bg
+  --primary-bgColor: #FFFFFF;
+  --secondary-bgColor: #FBFBFB;
+
+  //Border
+  --primary-borderColor: #EFEFEF;
+
+  //Size 
+  --iconSize-desktop: 40;
+  --iconSize-mobile: 24;
+}
+  
+  
+  

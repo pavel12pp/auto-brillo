@@ -1,0 +1,63 @@
+<article class="hero">
+  <div class="hero__image">
+    <img src="./img/hero-image.webp" alt="">
+  </div>
+  <div class="hero__container container">
+    <section class="hero__header">
+      <div class="hero__logo">
+        <a class="hero__logo-wrapper" href="#">
+          @@include("./../../mixin/icon/logo.html")
+        </a>
+      </div>
+      <div class="hero__languages">
+        <div class="hero__languages-wrapper">
+          <div class="hero__languages-options">
+            <div class="hero__languages-option choosed">
+              EN
+            </div>
+            <div class="hero__languages-option">
+              RU
+            </div>
+          </div>
+          <button class="hero__languages-button">
+            @@include("./../../mixin/icon/arrow-selector.html")
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="hero__content">
+      <h1 class="hero__title title">
+        Auto Brillo Detailing
+      </h1>
+      <section class="hero__services">
+        <div class="hero__service">
+          @@include("./../../mixin/icon/wash-icon.html")
+          <span>Car wash</span>
+        </div>
+        <div class="hero__service">
+          @@include("./../../mixin/icon/polish-icon.html")
+          <span>Professional polishing</span>
+        </div>
+        <div class="hero__service">
+          @@include("./../../mixin/icon/clean-icon.html")
+          <span>Interior dry cleaning</span>
+        </div>
+        <div class="hero__service">
+          @@include("./../../mixin/icon/repair-icon.html")
+          <span>Oil change, brake pads, minor repairs</span>
+        </div>
+        <div class="hero__service">
+          @@include("./../../mixin/icon/order-icon.html")
+          <span>Cars from Germany to order</span>
+        </div>
+      </section>
+      <a href="#" class="hero__link">
+        <span>Learn More</span>
+        @@include("./../../mixin/icon/car-icon.html")
+      </a>
+    </div>
+    <div class="hero__scroll">
+      @@include("./../../mixin/icon/arrow-scroll.html")
+    </div>
+  </div>
+</article>

@@ -1,0 +1,72 @@
+.title {
+  text-transform: uppercase;
+  @include adaptivePropertyMobile(font-size, 70, 24);
+  color: var(--primary-textColor);
+  line-height: 1.1;
+  font-weight: 700;
+  &:has(.title-car) {
+    display: inline-block;
+    position: relative;
+    @include adaptivePropertyMobile(margin-top, 40, 24);
+    @include adaptivePropertyMobile(margin-right, 20, 10);
+  }
+}
+
+.title-car {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  bottom: 100%;
+  left: 0;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: var(--accent-color);
+    left: 0;
+    @include adaptivePropertyMobile(bottom, 8, 4);
+  }
+  & > svg {
+    display: block;
+    position: absolute;
+    @include adaptivePropertyMobile(width, var(--iconSize-desktop), var(--iconSize-mobile));
+    height: auto;
+    aspect-ratio: 1/1;
+    fill: var(--accent-color);
+    bottom: 0;
+    left: 10%;
+  }
+}
+
+.title-cost {
+  white-space: nowrap;
+  @include adaptivePropertyMobile(font-size, 20, 16);
+  color: var(--primary-textColor);
+  &__value {
+    @include adaptivePropertyMobile(font-size, 50, 22);
+    color: var(--accent-textColor);
+  }
+}
+
+.subtitle {
+  @include adaptivePropertyMobile(font-size, 24, 18);
+  color: var(--primary-textColor);
+  line-height: 1;
+  font-weight: 400;
+}
+
+.text {
+  @include adaptivePropertyMobile(font-size, 18, 14);
+  color: var(--primary-textColor);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.content {
+  border-radius: 20px;
+  border: 5px solid var(--primary-borderColor);
+  background: var(--primary-bgColor);
+}

@@ -1,0 +1,56 @@
+.clean {
+  @include adaptivePropertyMobile(margin-bottom, 200, 40);
+  position: relative;
+  &__container {
+  }
+  
+  &__content {
+    position: relative;
+    padding-top: 30%;
+    padding-bottom: 20%;
+    max-width: 605px;
+    @include adaptivePropertyMobile(max-width, 605, 500);
+    & > *:not(:last-child) {
+      @include adaptivePropertyMobile(margin-bottom, 30, 10);
+    }
+  }
+
+  &__title-inner {
+  }
+
+  &__title {
+    color: var(--secondary-textColor);
+  }
+
+  &__title-car {
+  }
+
+  &__cost {
+    color: var(--secondary-textColor);
+  }
+
+  &__cost-value {
+  }
+
+  &__subtitle {
+    color: var(--secondary-textColor);
+  }
+
+  &__text {
+    color: var(--secondary-textColor);
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    & > img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

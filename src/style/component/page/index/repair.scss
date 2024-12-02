@@ -1,0 +1,75 @@
+.repair {
+  @include adaptivePropertyMobile(margin-bottom, 200, 40);
+  &__container {
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      & > * {
+        flex: 0 0 auto;
+      } 
+    };
+  }
+
+  &__content {
+    flex: 0 0 48%;
+    @include adaptivePropertyMobile(padding-left, 84, 20);
+    @media (max-width: 700px) {
+      @include adaptivePropertyMobile(padding-left, 0, 0);
+    };
+    & > *:not(:last-child) {
+      @include adaptivePropertyMobile(margin-bottom, 30, 10);
+    }
+  }
+
+  &__title-inner {
+  }
+
+  &__title {
+  }
+
+  &__title-car {
+
+  }
+
+  &__cost {
+  }
+
+  &__cost-value {
+  }
+
+  &__subtitle {
+  }
+
+  &__text {
+  }
+
+  &__image {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 52%;
+    min-height: 100%;
+    @include adaptivePropertyMobile(margin-top, 15, 0);
+    @include adaptivePropertyMobile(margin-bottom, 15, 0);
+    border-radius: 20px;
+    @media (max-width: 700px) {
+      @include adaptivePropertyMobile(height, 300, 200);
+      width: 100%;
+    };
+    & > img {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+

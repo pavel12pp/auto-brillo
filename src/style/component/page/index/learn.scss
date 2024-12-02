@@ -1,0 +1,105 @@
+body.learn-active {
+  overflow: hidden;
+  & .learn {
+    display: flex;
+  }
+}
+
+.learn {
+  display: none;
+  position: fixed;
+  z-index: 1200;
+  width: 100dvw;
+  height: 100dvh;
+  background-color: hsla(from var(--primary-color) h s l / 0.8);
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  &__container {
+    position: relative;
+    width: calc(100% - 20px);
+    max-width: 600px;
+    max-height: calc(100% - 20px);
+    @include adaptivePropertyMobile(padding-top, 20, 10);
+    @include adaptivePropertyMobile(padding-bottom, 20, 10);
+    @include adaptivePropertyMobile(padding-left, 30, 10);
+    @include adaptivePropertyMobile(padding-right, 30, 10);
+    background-color: var(--primary-bgColor);
+    border-radius: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    z-index: 1;
+    @include adaptivePropertyMobile(width, 30, 20);
+    aspect-ratio: 1/1;
+    @include adaptivePropertyMobile(top, 10, 7);
+    @include adaptivePropertyMobile(right, 10, 7);
+    cursor: pointer;
+    & > span {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 2px;
+      background-color: var(--primary-color);
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      &:nth-child(1) {
+        rotate: -45deg;
+      }
+      &:nth-child(2) {
+        rotate: 45deg;
+      }
+    }
+
+  }
+
+  &__title {
+    max-width: calc(100% - 20px);
+    @include adaptivePropertyMobile(margin-bottom, 15, 5);
+  }
+
+  &__description {
+    line-height: 1;
+    @include adaptivePropertyMobile(margin-bottom, 20, 10);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include adaptivePropertyMobile(gap, 15, 5);
+  }
+
+  &__field {
+    height: 30px;
+    @include adaptivePropertyMobile(height, 60, 30);
+    border: 2px solid var(--primary-borderColor);
+    @include adaptivePropertyMobile(padding-left, 10, 5);
+    @include adaptivePropertyMobile(padding-right, 10, 5);
+    @include adaptivePropertyMobile(border-radius, 10, 5);
+    @include adaptivePropertyMobile(font-size, 18, 14);
+    color: var(--primary-textColor);
+    line-height: 1.6;
+    font-weight: 400;
+    &:is(textarea) {
+      resize: none;
+      height: auto;
+    }
+  }
+
+  &__buton {
+    display: flex;
+    @include adaptivePropertyMobile(height, 60, 30);
+    border-radius: 5px;
+    background-color: var(--accent-color);
+    align-items: center;
+    justify-content: center;
+    & > span {
+      display: block;
+    }
+  }
+}

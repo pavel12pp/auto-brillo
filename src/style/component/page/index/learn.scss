@@ -19,6 +19,7 @@ body.learn-active {
   left: 0;
   &__container {
     position: relative;
+    overflow: scroll;
     width: calc(100% - 20px);
     max-width: 600px;
     max-height: calc(100% - 20px);
@@ -35,8 +36,8 @@ body.learn-active {
     z-index: 1;
     @include adaptivePropertyMobile(width, 30, 20);
     aspect-ratio: 1/1;
-    @include adaptivePropertyMobile(top, 10, 7);
-    @include adaptivePropertyMobile(right, 10, 7);
+    @include adaptivePropertyMobile(top, 15, 10);
+    @include adaptivePropertyMobile(right, 15, 10);
     cursor: pointer;
     & > span {
       display: block;
@@ -85,13 +86,43 @@ body.learn-active {
     color: var(--primary-textColor);
     line-height: 1.6;
     font-weight: 400;
+    &:has(#learn-phone) {
+      position: relative;
+    }
+    &:has(.iti--container) {
+      // border-bottom-left-radius: 0px;
+    }
+    &:has(textarea) {
+      height: auto;
+    }
+    & > * {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+    & input, & textarea {
+      @include adaptivePropertyMobile(font-size, 18, 14);
+      color: var(--primary-textColor);
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+  }
+  &__field-input {
+    display: block;
+    height: 100%;
+    width: 100%;
+    &:has(#learn-phone) {
+      // position: relative;
+      // z-index: 2;
+    }
     &:is(textarea) {
       resize: none;
       height: auto;
+      @include adaptivePropertyMobile(padding-top, 5, 0);
     }
   }
-
-  &__buton {
+  &__button {
     display: flex;
     @include adaptivePropertyMobile(height, 60, 30);
     border-radius: 5px;
@@ -102,4 +133,78 @@ body.learn-active {
       display: block;
     }
   }
+
+  &__check {
+    display: flex;
+    align-items: flex-start;
+    @include adaptivePropertyMobile(gap, 15, 10);
+    &:has(input:checked) &-label {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+  
+
+  &__check-label {
+    display: block;
+    position: relative;
+    @include adaptivePropertyMobile(width, var(--iconSize-desktop) / 1.5, var(--iconSize-mobile) / 1.5);
+    aspect-ratio: 1/1;
+    border: 2px solid var(--primary-borderColor);
+    border-radius: 2px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      @include adaptivePropertyMobile(width, var(--iconSize-desktop) / 5, var(--iconSize-mobile) / 5);
+      aspect-ratio: 1/2;
+      transform: translate(-50%,-65%) rotate(45deg);
+      border-bottom: 2px solid var(--accent-color);
+      border-right: 2px solid var(--accent-color);
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+  }
+
+  &__check-input {
+    display: none;
+  }
+
+  &__check-desckription {
+    flex-shrink: 1;
+    line-height: 1.1;
+    @include adaptivePropertyMobile(font-size, 16, 14);
+  }
+
+}
+
+.iti.iti--container {
+  position: absolute;
+  z-index: 1;
+  width: fit-content;
+  background-color: var(--primary-bgColor);
+  padding: 10px;
+  top: calc(100% + 5px);
+  border: 2px solid var(--primary-borderColor);
+  box-shadow: 0px 10px 10px 1px hsla(from var(--primary-color) h s l / 0.4);
+  height: 20dvh;
+  @include adaptivePropertyMobile(border-radius, 10, 5);
+  min-height: 200px;
+  overflow: scroll;
+  left: -2px;
+}
+.iti__dropdown-content {
+  width: 100%;
+}
+.iti__selected-country-primary {
+  &:hover {
+    background-color: transparent;
+  }
+}
+.iti__flag {
+  // display: none;
 }

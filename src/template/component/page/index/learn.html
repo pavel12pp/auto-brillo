@@ -10,11 +10,16 @@
       Our manager will contact you shortly
     </p>
     <form action="" class="learn__form">
-      <input type="text" class="learn__field" placeholder="Name">
-      <input type="text" class="learn__field" placeholder="Phone">
-      <input type="text" class="learn__field" placeholder="E-mail">
-      <textarea name="" id="" rows="4" class="learn__field" placeholder="Message"></textarea>
-      <button class="learn__buton" type="submit"><span class="text">Send a request</span></button>
+      <div class="learn__field"><input type="text" class="learn__field-input" placeholder="Name"></div>
+      <div class="learn__field"><input type="text" id="learn-phone" class="learn__field-input" placeholder="Phone"></div>
+      <div class="learn__field"><input type="text" class="learn__field-input" placeholder="E-mail"></div>
+      <div class="learn__field"><textarea name="" id="" rows="4" class="learn__field-input" placeholder="Message"></textarea></div>
+      <div class="learn__check">
+        <label for="learn-check" class="learn__check-label"></label>
+        <input id="learn-check" type="checkbox" class="learn__check-input">
+        <p class="learn__check-desckription">By clicking "Send Request" you consent to the processing of personal data. </p>
+      </div>
+      <button class="learn__button" type="submit"><span class="text">Send a request</span></button>
     </form>
   </div>
 </section>

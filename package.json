@@ -36,5 +36,8 @@
   },
   "browserslist": [
     "last 5 versions"
-  ]
+  ],
+  "dependencies": {
+    "intl-tel-input": "^24.8.1"
+  }
 }

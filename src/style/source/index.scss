@@ -7,6 +7,9 @@
 @import './../general/settings/init.scss';
 
 // @import url("https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css") layer(library); !!!Если надо подключить сторонние стили
+@layer library {
+  @import './../component/mixin/iti.scss';
+}
 
 @layer patterns{
   @import './../general/patterns/text.scss';
